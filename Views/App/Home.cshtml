@@ -1,0 +1,35 @@
+﻿<h4>Play now! <small>click on numbers near the hole to move blocks</small></h4>
+<div class="row">
+    <div class="col-lg-6">
+        <h4>Timer <small><timer interval="1000">{{hhours}}:{{mminutes}}:{{sseconds}}.</timer></small></h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-6">
+        <div my-arrange-game finish-callback="finished()" game-id="gameId" ng-init="gameId='@ArrangeGame.Models.MemoryDB.GenerateGame()'"></div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-6">
+        <h2 ng-show="isGameover">
+            Well done <span ng-hide="isEditMode">{{player}}</span>
+            <small ng-show="isEditMode">
+                <input type="text" name="player" ng-model="player" style="width:30%; display:inline;" class="form-control input-sm" />
+                <input type="button" class="btn btn-sm" value="SAVE" ng-click="savePlayer()" />
+            </small><br />
+                <small>
+                    {{'in ' + (time.minutes ? time.minutes+ ' min ': '') +  time.seconds + ' sec'}}
+                </small>
+        </h2>
+        <h4 ng-show="topPlayers.length > 0">Top 10 players</h4>
+        <ol>
+            <li ng-repeat="x in topPlayers">{{x.Name}} - {{x.Time | time}}</li>
+        </ol>
+    </div>
+</div>
+<hr />
+<a href="/?newgame" class="btn btn-info">New game</a>
+<hr />
+<h3>A solved 15-puzzle.</h3>
+<img src="~/Assets/images/solved-puzzle.png" />
+<p>The 15-puzzle (also called Gem Puzzle, Boss Puzzle, Game of Fifteen, Mystic Square and many others) is a sliding puzzle that consists of a frame of numbered square tiles in random order with one tile missing.</p>
+<small>source: <a href="http://en.wikipedia.org/wiki/15_puzzle" target="_blank">Wikipedia</a> </small>

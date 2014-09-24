@@ -1,0 +1,35 @@
+﻿
+<div class="container-fluid">
+
+    <header class="row site-header" ng-controller="mainCtrl">
+        <nav class="col-md-10 col-md-offset-1">
+            <div class="row">
+                <h1>The 15-sliding puzzle.</h1>
+            </div>
+            <div class="row">
+                <ul class="list-inline">
+                    
+                    <li ng-show="loggedIn">
+                        <a href="" ng-click="logout()">{{username}} | Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="row site-body">
+        <div class="col-md-10 col-md-offset-1" ng-view>
+        </div>
+    </div>
+    <div class="row site-footer">
+        <div class="col-md-10 col-md-offset-1">
+            <footer>
+                <div class="text-right">
+                    Developed by <a style="color:lightblue" href="http://victorantos.com" target="_blank">Victorantos</a>, &copy; @DateTime.Today.Year
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+</div>

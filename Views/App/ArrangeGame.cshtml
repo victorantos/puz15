@@ -1,0 +1,12 @@
+﻿<div class="arrange-game" ng-controller="arrangeGameCtrl">
+
+    <table class="table table-bordered">
+        <tr ng-repeat="x in range(grid.cols) track by $index">
+            <td ng-repeat="y in range(grid.rows)  track by $index" ng-click="grid.moveCell($index+1,$parent.$index + 1)">
+                <input type="button" class="button btn-game" value="{{grid.getCell($index+1,$parent.$index + 1).value}}" ng-hide="grid.getCell($index+1, $parent.$index + 1).value == ''" />
+            </td>
+        </tr>
+    </table>
+</div>
+
+    

@@ -1,0 +1,15 @@
+﻿.arrange-game table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    font-size: 28px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.arrange-game .table-bordered > tbody > tr > td {
+    border-color: green;
+}
+
+.arrange-game .btn-game{
+    width:100%;
+}
