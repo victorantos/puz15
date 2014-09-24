@@ -1,4 +1,4 @@
-puz15 - online game built using AngularJs and WebApi
+puz15 - online game built using AngularJs
 =====
 
 For live demo go to  http://puz15.com
